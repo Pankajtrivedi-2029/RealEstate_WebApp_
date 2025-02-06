@@ -8,7 +8,7 @@ function Login() {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const {updateUser} = useContext(AuthContext)
+  const { updateUser } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -27,8 +27,8 @@ function Login() {
         password,
       });
 
-      updateUser(res.data)
-// localStorage.setItem("user",JSON.stringify(res.data));
+      updateUser(res.data);
+      // localStorage.setItem("user",JSON.stringify(res.data));
       navigate("/");
     } catch (err) {
       setError(err.response.data.message);

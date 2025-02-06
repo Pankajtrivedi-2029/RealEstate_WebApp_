@@ -8,6 +8,7 @@ import userRoute from "./routes/user.route.js";
 import chatRoute from "./routes/chat.route.js";
 import messageRoute from "./routes/message.route.js";
 
+
 const app = express();
 
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));  // credentials : true means we can send our cookies to the client side
